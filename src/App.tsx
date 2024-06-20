@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { initializeApp } from "firebase/app"
+import { Register } from "./components/register";
 
 function App() {
+
+  const firebaseApp = initializeApp({
+
+    apiKey: "AIzaSyD3w9QPfc31WJ12N0xXOQ68jjuGdZ8QEG0",
+    authDomain: "moises-react.firebaseapp.com",
+    projectId: "moises-react",
+
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Fala bro</h1>
+      <Register />
     </div>
   );
 }
